@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-
+  <div> dsfl;sd</div>
+  <div> dsfl;sd</div>
+  <div> dsfl;sd</div>
+  <div> dsfl;sd</div>
   </div>
 </template>
 

@@ -1,60 +1,36 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
+    <Nav-bar></Nav-bar>
+    <v-main class="app-content">
+      <router-view></router-view>
     </v-main>
+    <Footer-bar></Footer-bar>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
+import Footer from './components/footer'
+import Nav from './components/navbar'
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
+    'Footer-bar': Footer,
+    'Nav-bar': Nav
   },
+  data () {
+    return {
 
-  data: () => ({
-    //
-  }),
-};
+    }
+  },
+  created(){
+    console.log(this.$vuetify)
+    this.appDetector()
+  },
+  methods:{
+    appDetector(){
+      //检测当前url,使用语言，设备类型，并且存入sessionStorage
+      console.log('检测当前url,使用语言，设备类型，并且存入sessionStorage');
+    }
+  }
+}
 </script>
