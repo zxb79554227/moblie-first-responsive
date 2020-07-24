@@ -1,3 +1,12 @@
-.app-content{
+.app-content {
     margin-top: 5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0 !important
+}
+
+
+.v-dialog {
+    background: rgba(19, 19, 19, 0.966);
 }

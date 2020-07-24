@@ -1,6 +1,8 @@
 <template>
   <v-app>
+      <M-nav></M-nav>
     <Nav-bar></Nav-bar>
+  
     <v-main class="app-content">
       <router-view></router-view>
     </v-main>
@@ -9,13 +11,15 @@
 </template>
 
 <script>
+import Mnavi from './components/moblieNavigator'
 import Footer from './components/footer'
 import Nav from './components/navbar'
 export default {
   name: 'App',
   components: {
     'Footer-bar': Footer,
-    'Nav-bar': Nav
+    'Nav-bar': Nav,
+    'M-nav':Mnavi
   },
   data () {
     return {
